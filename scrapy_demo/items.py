@@ -7,6 +7,9 @@
 
 import scrapy
 
+'''
+抓取的节点信息
+'''
 
 class ScrapyDemoItem(scrapy.Item):
     # define the fields for your item here like:
