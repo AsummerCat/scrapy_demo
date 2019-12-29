@@ -1,16 +1,20 @@
 # -*- coding: utf-8 -*-
 import scrapy
 
+'''
+爬虫文件
+
+'''
+
 
 class DoubanSpidersSpider(scrapy.Spider):
+    # 爬虫名称
     name = 'douban_spiders'
+    # 允许的域名 爬虫
     allowed_domains = ['movie.douban.com']
-    start_urls = ['http://movie.douban.com/']
+    # 入口url,扔到调度器
+    start_urls = ['http://movie.douban.com/top250']
 
     def parse(self, response):
-        # 需要抓取的逻辑
-        movie_num = scrapy.Field()  # 序号
-        introduce = scrapy.Field()  # 电影介绍
-        star = scrapy.Field()  # 星级
-        evaluate = scrapy.Field()  # 评论
-        describe = scrapy.Field()  # 描述
+        print("请求成功")
+
