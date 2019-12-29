@@ -49,7 +49,6 @@ class DoubanSpidersSpider(scrapy.Spider):
             yield douban_item
         # 下一页
         next_link = response.xpath("//span[@class='next']/link/@href").extract()
-        print(next_link)
         if next_link:
             next_link = next_link[0]
             # 提交管道进行 下一页处理
