@@ -52,5 +52,5 @@ class DoubanSpidersSpider(scrapy.Spider):
         print(next_link)
         if next_link:
             next_link = next_link[0]
-            # 提交管道进行下一次
+            # 提交管道进行 下一页处理
             yield scrapy.Request("http://movie.douban.com/top250" + next_link, callback=self.parse)
