@@ -13,9 +13,11 @@
 需要开启settings.py 的 ITEM_PIPELINES
 
 '''
+
+
 class ScrapyDemoPipeline(object):
     def process_item(self, item, spider):
-        data=dict[item]
+        data = dict(item)
         print("输出-------------------------")
-        print(data)
+        print(item["describe"])
         return item
